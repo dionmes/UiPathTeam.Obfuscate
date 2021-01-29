@@ -1,0 +1,43 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+        <!--Obfuscate Icon-->
+    <DrawingGroup x:Key="obfuscateicon0873210411b54bf695d133fa453d238e_0">
+      <DrawingGroup.ClipGeometry>
+        <RectangleGeometry Rect="0,0,512,512" />
+      </DrawingGroup.ClipGeometry>
+      <DrawingGroup x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_1">
+        <DrawingGroup x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_2">
+          <GeometryDrawing x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_3" Brush="#FFCCCCCC">
+            <GeometryDrawing.Geometry>
+              <PathGeometry FillRule="EvenOdd" Figures="M63.5,44C63.5,37.3726,68.8726,32,75.5,32L436.5,32C443.127,32,448.5,37.3726,448.5,44L448.5,468C448.5,474.627,443.127,480,436.5,480L75.5,480C68.8726,480,63.5,474.627,63.5,468L63.5,44z" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_4" Transform="1,0,0,0.5509,0,23.8007">
+          <GeometryDrawing x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_5" Brush="#FFFFFFFF">
+            <GeometryDrawing.Geometry>
+              <PathGeometry FillRule="EvenOdd" Figures="M91.5001,53L422.5,53 422.5,98.3778 91.5001,98.3778z" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_6" Transform="1,0,0,0.5509,0,58.7573">
+          <GeometryDrawing x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_7" Brush="#FF000000">
+            <GeometryDrawing.Geometry>
+              <PathGeometry FillRule="EvenOdd" Figures="M90.5,130.845L280.761,130.845 280.761,176.222 90.5,176.222z" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_8" Transform="1,0,0,0.5509,0,94.5845">
+          <GeometryDrawing x:Name="obfuscateicon0873210411b54bf695d133fa453d238e_9" Brush="#FFFFFFFF">
+            <GeometryDrawing.Geometry>
+              <PathGeometry FillRule="EvenOdd" Figures="M91.5001,210.622L329.284,210.622 329.284,256 91.5001,256z" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+    <DrawingBrush x:Key="ObfuscateIcon" Drawing="{StaticResource obfuscateicon0873210411b54bf695d133fa453d238e_0}" />
+
+
+</ResourceDictionary>

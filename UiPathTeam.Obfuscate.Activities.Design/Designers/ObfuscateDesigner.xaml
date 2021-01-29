@@ -1,0 +1,81 @@
+<sap:ActivityDesigner x:Class="UiPathTeam.Obfuscate.Activities.Design.Designers.ObfuscateDesigner"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:activity="clr-namespace:UiPathTeam.Obfuscate.Activities.Properties;assembly=UiPathTeam.Obfuscate.Activities"
+                      xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+                      xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+                      xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+                      xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
+                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls">
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Themes\Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
+            <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/UiPathTeam.Obfuscate.Activities.Design;component/themes/icons.xaml}" />
+    </sap:ActivityDesigner.Icon>
+
+    <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
+        <Grid Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Content="{x:Static activity:Resources.Obfuscate_InputImage_DisplayName}" Grid.Row="0"
+                   ToolTip="{x:Static activity:Resources.Obfuscate_InputImage_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="1" ExpressionType="{Binding ModelItem.Properties[InputImage].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.Obfuscate_InputImage_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.InputImage" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+
+            <Label Content="{x:Static activity:Resources.Obfuscate_PositionX_DisplayName}" Grid.Row="2"
+                   ToolTip="{x:Static activity:Resources.Obfuscate_PositionX_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="3" ExpressionType="{Binding ModelItem.Properties[PositionX].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.Obfuscate_PositionX_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.PositionX" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+
+            <Label Content="{x:Static activity:Resources.Obfuscate_PositionY_DisplayName}" Grid.Row="4"
+                   ToolTip="{x:Static activity:Resources.Obfuscate_PositionY_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="5" ExpressionType="{Binding ModelItem.Properties[PositionY].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.Obfuscate_PositionY_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.PositionY" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+
+            <Label Content="{x:Static activity:Resources.Obfuscate_Width_DisplayName}" Grid.Row="6"
+                   ToolTip="{x:Static activity:Resources.Obfuscate_Width_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="7" ExpressionType="{Binding ModelItem.Properties[Width].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.Obfuscate_Width_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.Width" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+
+            <Label Content="{x:Static activity:Resources.Obfuscate_Height_DisplayName}" Grid.Row="8"
+                   ToolTip="{x:Static activity:Resources.Obfuscate_Height_Description}"/>
+            <sapv:ExpressionTextBox Grid.Row="9" ExpressionType="{Binding ModelItem.Properties[Height].PropertyType.GenericTypeArguments[0]}" OwnerActivity="{Binding Path=ModelItem}" HintText="{x:Static activity:Resources.Obfuscate_Height_Description}" UseLocationExpression="False">
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.Height" Converter="{StaticResource ArgumentToExpressionConverter}" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+        </Grid>
+    </uip:ActivityDecoratorControl>
+</sap:ActivityDesigner>

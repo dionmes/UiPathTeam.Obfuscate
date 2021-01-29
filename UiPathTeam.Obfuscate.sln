@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UiPathTeam.Obfuscate", "UiPathTeam.Obfuscate", "{F3BCDAC0-1724-44E4-AD27-4BCA18160BDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPathTeam.Obfuscate", "UiPathTeam.Obfuscate\UiPathTeam.Obfuscate.csproj", "{49830F2F-C9E5-49CE-A698-8DD669950981}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPathTeam.Obfuscate.Activities", "UiPathTeam.Obfuscate.Activities\UiPathTeam.Obfuscate.Activities.csproj", "{88B25AF6-C848-453A-9B97-4EF9D3772C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPathTeam.Obfuscate.Activities.Design", "UiPathTeam.Obfuscate.Activities.Design\UiPathTeam.Obfuscate.Activities.Design.csproj", "{61493946-D6C5-4173-9314-9BAB6B743CBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{BC7A4F27-BAEB-4862-83D9-E09E64FB35F4}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities", "..\Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.shproj", "{4546856D-EA50-45C6-9419-EEEACB5A80AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities.Design", "..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.shproj", "{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{4546856d-ea50-45c6-9419-eeeacb5a80aa}*SharedItemsImports = 13
+		..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{61493946-d6c5-4173-9314-9bab6b743cbf}*SharedItemsImports = 5
+		..\Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{88b25af6-c848-453a-9b97-4ef9d3772c12}*SharedItemsImports = 5
+		..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{df9c43f0-add3-4fbf-995e-84b92f9cbf25}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49830F2F-C9E5-49CE-A698-8DD669950981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49830F2F-C9E5-49CE-A698-8DD669950981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49830F2F-C9E5-49CE-A698-8DD669950981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49830F2F-C9E5-49CE-A698-8DD669950981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B25AF6-C848-453A-9B97-4EF9D3772C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B25AF6-C848-453A-9B97-4EF9D3772C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B25AF6-C848-453A-9B97-4EF9D3772C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B25AF6-C848-453A-9B97-4EF9D3772C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61493946-D6C5-4173-9314-9BAB6B743CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61493946-D6C5-4173-9314-9BAB6B743CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61493946-D6C5-4173-9314-9BAB6B743CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61493946-D6C5-4173-9314-9BAB6B743CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{49830F2F-C9E5-49CE-A698-8DD669950981} = {F3BCDAC0-1724-44E4-AD27-4BCA18160BDF}
+		{88B25AF6-C848-453A-9B97-4EF9D3772C12} = {F3BCDAC0-1724-44E4-AD27-4BCA18160BDF}
+		{61493946-D6C5-4173-9314-9BAB6B743CBF} = {F3BCDAC0-1724-44E4-AD27-4BCA18160BDF}
+		{4546856D-EA50-45C6-9419-EEEACB5A80AA} = {BC7A4F27-BAEB-4862-83D9-E09E64FB35F4}
+		{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25} = {BC7A4F27-BAEB-4862-83D9-E09E64FB35F4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F45E6F65-823B-4041-A1DC-56D819833740}
+	EndGlobalSection
+EndGlobal
