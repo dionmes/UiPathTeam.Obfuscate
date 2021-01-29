@@ -6,6 +6,8 @@ using System.Drawing;
 using UiPathTeam.Obfuscate.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
+using ImageMagick;
+using System.IO;
 
 namespace UiPathTeam.Obfuscate.Activities
 {
@@ -109,9 +111,57 @@ namespace UiPathTeam.Obfuscate.Activities
             var task = ExecuteWithTimeout(context, cancellationToken);
             if (await Task.WhenAny(task, Task.Delay(timeout, cancellationToken)) != task) throw new TimeoutException(Resources.Timeout_Error);
 
+            Image returnImage;
+
+            // Check if activity should blur or hide part of the image
+
+            if (blur)
+            {
+
+                // Convert image to bytestream
+                ImageConverter _imageConverter = new ImageConverter();
+                byte[] imageByteStream = (byte[])_imageConverter.ConvertTo(inputImage, typeof(byte[]));
+
+                // Create image from bytestream for MagickImage use
+                var magickimage = new MagickImage(imageByteStream);
+
+                // Blur part of image
+                magickimage.RegionMask(new MagickGeometry(positionX, positionY, width, height));
+                magickimage.GaussianBlur(blurAmount, 25);
+                magickimage.RemoveRegionMask();
+
+                // Convert MagickInmage to Bytestream
+                var imageBytesOut = magickimage.ToByteArray();
+                MemoryStream ms = new MemoryStream(imageBytesOut);
+
+                // Create return image from bytestream
+                returnImage = Image.FromStream(ms);
+
+            }
+            else
+            {
+
+                // Create graphics context with returnImage
+                returnImage = inputImage;
+
+                using (Graphics g = Graphics.FromImage(returnImage))
+                {
+                    // Define brush and rectangle
+                    SolidBrush blackBrush = new SolidBrush(Color.Black);
+                    Rectangle rect = new Rectangle(positionX, positionY, width, height);
+
+                    // Fill rectangle
+                    g.FillRectangle(blackBrush, rect);
+
+                    // Cleanup
+                    g.Dispose();
+                }
+
+            }
+
             // Outputs
             return (ctx) => {
-                OutputImage.Set(ctx, null);
+                OutputImage.Set(ctx, returnImage);
             };
         }
 
