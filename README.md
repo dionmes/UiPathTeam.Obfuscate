@@ -1,7 +1,7 @@
 # UiPathTeam.Obfuscate
 An UiPath activity to hide or blur part of an image
 
-#Description
+# Description
 The obfuscate activity can be used to hide or blur part of an image. This can be useful when storing scanned ID cards or other images with sensitive information. 
 With this activity you can mask that specific part of an image that contains the sensitive information. 
 
