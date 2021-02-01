@@ -9,10 +9,10 @@
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>This package was generated using the UiPath VS Extension.</Description>
-    <Authors>Company</Authors>
-    <Company>Company</Company>
-    <Copyright>© 2020 Company</Copyright>
+    <Description>This activity enables you to hide or blur part of an image</Description>
+    <Authors>UiPathTeam</Authors>
+    <Company></Company>
+    <Copyright>© 2021 UiPath</Copyright>
     <PackageTags>UiPath Activit𝗒</PackageTags>
     <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</PackageIconUrl>
@@ -24,10 +24,10 @@
   </PropertyGroup>
   <!-- Package Versions -->
   <PropertyGroup Condition="'$(Configuration)' == 'Debug' AND '$(DesignTimeBuild)' != 'true'">
-    <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
+    <PackageVersion>0.2.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>0.1.0</PackageVersion>
+    <PackageVersion>0.2.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\ObfuscateDesigner.xaml" />
