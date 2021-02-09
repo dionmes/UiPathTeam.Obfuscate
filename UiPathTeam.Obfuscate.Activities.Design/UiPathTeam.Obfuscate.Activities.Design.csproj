@@ -8,13 +8,12 @@
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression></PackageLicenseExpression>
+	<PackageLicenseUrl>https://www.uipath.com/hubfs/legalspot/UiPath_Activity_License_Agreement.pdf </PackageLicenseUrl>
     <Description>This activity enables you to hide or blur part of an image</Description>
     <Authors>UiPathTeam</Authors>
     <Company></Company>
     <Copyright>© 2021 UiPath</Copyright>
     <PackageTags>UiPath Activit𝗒, image, png, jpg, jpeg, Privacy, Compliancy, blur, hide</PackageTags>
-    <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</PackageIconUrl>
     <!--<PackageIcon>packageIcon.png</PackageIcon>--> <!--PackageIcon not yet supported in UiPath Studio-->
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
